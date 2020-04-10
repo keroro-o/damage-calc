@@ -28,6 +28,8 @@ function effectiveDamage(power, armor, armorPenetration) {
 function normalize(n) {
   if (n < 0) {
     return 0;
+  } else if (n >= 2000) {
+    return 2000;
   } else {
     return n;
   }

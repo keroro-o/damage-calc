@@ -16,4 +16,10 @@ describe('#effectiveDamage()', () => {
     assert.equal(dc.effectiveDamage(0, 0, -1), 0);
   });
 
+  it('2000より大きい異常値におけるダメージ計算ができる', () => {
+    assert.equal(dc.effectiveDamage(2001, 0, 0), 2000);
+    assert.equal(dc.effectiveDamage(300, 2150, 0), 14);
+    assert.equal(dc.effectiveDamage(300, 2000, 2001), 300);
+  });
+
 });
