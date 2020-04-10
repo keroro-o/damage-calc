@@ -22,4 +22,9 @@ describe('#effectiveDamage()', () => {
     assert.equal(dc.effectiveDamage(300, 2000, 2001), 300);
   });
 
+  // 攻撃力が500で防御力が100、防御力貫通が800の時は、実行防御力が0としてみなされ、ダメージが500となるというテスト
+  it('実行防御力は０未満にならない', () => {
+    assert.equal(dc.effectiveDamage(500, 100, 800), 500);
+  });
+
 });
