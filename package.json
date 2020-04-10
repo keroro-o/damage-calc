@@ -4,5 +4,8 @@
   "description": "caliculator of damage",
   "main": "index.js",
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "~4.0.1"
+  }
 }
